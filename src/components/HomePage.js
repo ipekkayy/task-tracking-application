@@ -18,7 +18,7 @@ function HomePage({ onLogout }) {
     'Silinen': []
   });
   const [currentStatus, setCurrentStatus] = useState('');
-  const [taskToDelete, setTaskToDelete] = useState(null); 
+  const [taskToDelete, setTaskToDelete] = useState(null);
   const [selectedTask, setSelectedTask] = useState(null);
   const dropdownRef = useRef(null);
   const [isPersonModalOpen, setIsPersonModalOpen] = useState(false);
@@ -116,7 +116,7 @@ function HomePage({ onLogout }) {
   };
 
   const updatePerson = (updatedPerson) => {
-    const updatedPeople = people.map(person => 
+    const updatedPeople = people.map(person =>
       person.name === selectedPerson.name ? updatedPerson : person
     );
     setPeople(updatedPeople);
@@ -148,7 +148,7 @@ function HomePage({ onLogout }) {
   };
 
   const updateTask = (updatedTask) => {
-    const oldStatus = selectedTask.status; 
+    const oldStatus = selectedTask.status;
     const newStatus = updatedTask.status;
 
     let updatedTasks = { ...tasks };
@@ -164,7 +164,7 @@ function HomePage({ onLogout }) {
 
     setTasks(updatedTasks);
     saveTasksToLocalStorage(updatedTasks);
-    setSelectedTask(null);  
+    setSelectedTask(null);
   };
 
   const handleDeleteClick = (status, index) => {
@@ -176,7 +176,7 @@ function HomePage({ onLogout }) {
       const { status, index } = taskToDelete;
 
       const taskToMove = tasks[status][index];
-      taskToMove.status = 'Silinen';  
+      taskToMove.status = 'Silinen';
 
       const updatedTasks = {
         ...tasks,
@@ -186,7 +186,7 @@ function HomePage({ onLogout }) {
 
       setTasks(updatedTasks);
       saveTasksToLocalStorage(updatedTasks);
-      setTaskToDelete(null); 
+      setTaskToDelete(null);
     }
   };
 
@@ -247,7 +247,8 @@ function HomePage({ onLogout }) {
           </div>
           <div className="row mt-4 text-start mx-0 w-100">
             {['Yeni', 'Devam Eden', 'Tamamlanan', 'Silinen'].map((status, index) => (
-              <div className="col-md-3 new-card" key={index}>
+              <div className="col-lg-3 new-card mb-3" key={index}>
+                <div className="new-card-element">
                 <div className="bg-dark p-3 radius-5">
                   <div>{status}</div>
                   {status !== 'Silinen' && (
@@ -290,7 +291,7 @@ function HomePage({ onLogout }) {
                     </div>
                   </OverlayTrigger>
                 ))}
-
+                </div>
               </div>
             ))}
           </div>

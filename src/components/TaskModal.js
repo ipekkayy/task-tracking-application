@@ -30,7 +30,6 @@ function TaskModal({ isOpen, onClose, onSave, defaultStatus, people }) {
       return; 
     }
 
-    // Hata yoksa görevi kaydet
     const newTask = {
       title: taskTitle,
       description: taskDescription,
@@ -45,7 +44,7 @@ function TaskModal({ isOpen, onClose, onSave, defaultStatus, people }) {
     setTaskTitle('');
     setTaskDescription('');
     setAssignedTo('');
-    setErrors({ title: false, description: false }); // Hataları sıfırla
+    setErrors({ title: false, description: false }); 
   };
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';  // Link bileşenini ekledik
+import { Link, useNavigate } from 'react-router-dom'; 
 
 const Register = () => {
   const [fullName, setFullName] = useState(''); 
@@ -85,8 +85,6 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
-          {/* Şifre Doğrulama Alanı */}
           <Form.Group className="mb-3" controlId="formConfirmPassword">
             <Form.Label className="text-dark font-size-sl">
               <b>Şifreyi Doğrula</b>
@@ -98,8 +96,6 @@ const Register = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </Form.Group>
-
-
           <Button variant="primary" type="submit" className="w-100">
             Kayıt Ol
           </Button>

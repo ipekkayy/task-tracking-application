@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';  // Link bileşenini ekledik
+import { Link } from 'react-router-dom';  
 
 const Login = ({ onLogin }) => {
   const [tckn, setTckn] = useState('');
@@ -73,12 +73,9 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
-
           <Button variant="primary" type="submit" className="w-100">
             Giriş Yap
           </Button>
-
-          {/* Kayıt Ol linki */}
           <div className="text-center mt-4">
             <Link to="/register" className="text-primary">
               Hesabınız yok mu? Kayıt Ol

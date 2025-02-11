@@ -12,7 +12,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /*   height: 100vh; */
 
 }
 
@@ -133,6 +132,11 @@ a {
 
 .task-card:hover i {
     display: block;
+}
+.new-card-element{
+    border: 1px solid #6d6d6d;
+    border-radius: 6px;
+    padding: 13px;
 }
 .user-div{
     height: 35px;

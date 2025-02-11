@@ -23,20 +23,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Eğer giriş yapılmışsa HomePage'e yönlendir */}
         {isAuthenticated ? (
           <Route path="/" element={<HomePage onLogout={handleLogout} />} />
         ) : (
           <>
-            {/* Giriş yapılmamışsa Login ve Register sayfaları */}
             <Route path="/login" element={<Login onLogin={() => setIsAuthenticated(true)} />} />
             <Route path="/register" element={<Register />} />
-            {/* Herhangi bir geçersiz URL giriş ekranına yönlendirilir */}
             <Route path="*" element={<Navigate to="/login" />} />
           </>
         )}
 
-        {/* Giriş yapılmışsa login veya register sayfasına erişmeye çalışıldığında ana sayfaya yönlendir */}
         {isAuthenticated && (
           <>
             <Route path="/login" element={<Navigate to="/" />} />

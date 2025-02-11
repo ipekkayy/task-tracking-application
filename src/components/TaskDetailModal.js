@@ -7,7 +7,6 @@ function TaskDetailModal({ show, onClose, task, onSave, people, isReadOnly }) {
     const [status, setStatus] = useState('');
     const [assignedTo, setAssignedTo] = useState('');
 
-    // Modal açıldığında mevcut görev bilgilerini yükle
     useEffect(() => {
         if (task) {
             setTitle(task.title);
@@ -25,8 +24,8 @@ function TaskDetailModal({ show, onClose, task, onSave, people, isReadOnly }) {
             status,
             assignedTo,
         };
-        onSave(updatedTask);  // Düzenlenmiş görevi gönder
-        onClose();  // Modalı kapat
+        onSave(updatedTask); 
+        onClose();  
     };
 
     return (
