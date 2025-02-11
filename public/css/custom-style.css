@@ -41,12 +41,19 @@ a {
 .radius-5 {
     border-radius: 5px;
 }
-.cursor-pointer{
+
+.cursor-pointer {
     cursor: pointer;
 }
 
 .bg-dark {
     background-color: black !important;
+}
+.font-size-sl {
+    font-size: 14px;
+}
+.font-size-ml {
+    font-size: 20px;
 }
 
 .font-size-lg {
@@ -88,35 +95,63 @@ a {
 }
 
 .task-card {
-    background-color: #8181818f;
+    background-color: #ffffffcf;
     border-radius: 5px;
+    color: black;
 }
 
 .add-card button {
     padding-left: 28px;
     color: rgb(211, 211, 211) !important;
+    border: 1px solid #ffffff38;
 }
+
 .add-card button:hover {
-  background-color: #5c5c5c !important;
+    background-color: #5c5c5c !important;
 }
+
 .add-card i {
     color: rgb(211, 211, 211);
     top: 12px;
     left: 6px;
 }
-.task-card{
+
+.task-card {
     border: 2px solid transparent;
 }
-.task-card:hover{
+
+.task-card:hover {
     border: 2px solid white;
 }
 
-.task-card i{
+.task-card i {
     top: 9px;
     right: 11px;
     font-size: 14px;
     display: none;
 }
-.task-card:hover i{
+
+.task-card:hover i {
     display: block;
+}
+.user-div{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    margin-right: -7px;
+    color: black;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+.user-div:hover {
+    transform: scale(1.1); 
+  }
+  .status-select:disabled {
+    background-color: #d516169e;  
+    color: white;  
   }
